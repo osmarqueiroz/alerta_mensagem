@@ -1,0 +1,21 @@
+RSS
+http://pox.globo.com/rss/g1/
+http://rss.uol.com.br/feed/noticias.xml
+http://noticias.r7.com/feed.xml
+http://esportes.r7.com/feed.xml
+http://entretenimento.r7.com/pop/cinema/feed.xml
+http://rss.home.uol.com.br/index.xml
+http://esporte.uol.com.br/ultimas/index.xml
+http://cinema.uol.com.br/ultnot/index.xml
+
+Clima
+http://servicos.cptec.inpe.br/XML/
+https://home.openweathermap.org/users/sign_in
+
+
+xample app listening on port 3000!
+Mozilla/5.0 (X11; Linux x86_64; rv:51.0) Gecko/20100101 Firefox/51.0
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+Mozilla/5.0 (SMART-TV; X11; Linux armv7l) AppleWebkit/537.42 (KHTML, like Gecko) Chromium/25.0.1349.2 Chrome/25.0.1349.2 Safari/537.42
+Mozilla/5.0 (SMART-TV; X11; Linux armv7l) AppleWebkit/537.42 (KHTML, like Gecko) Chromium/25.0.1349.2 Chrome/25.0.1349.2 Safari/537.42
+

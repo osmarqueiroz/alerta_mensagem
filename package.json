@@ -1,0 +1,16 @@
+{
+  "name": "alerta_mensagem",
+  "version": "1.0.0",
+  "description": "Projeto voltado a notificar dispositivos sobre ocorrencias dentro da empresa, para os dispositivos nao ficarem ociosos noticias em rss e informações sobre temperatura deveram ser adicionados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/ramsosmar/alerta_mensagem.git"
+  },
+  "author": "Osmar Queiroz",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ramsosmar/alerta_mensagem#readme"
+}
