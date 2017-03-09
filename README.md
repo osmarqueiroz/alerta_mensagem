@@ -15,7 +15,8 @@ onde podemos apresentar noticias dos maiores portais, o clima do dia, e lista de
 ### somente relatório ###
 onde apresentamos relatórios da empesa e mostrariamos as informações dos chamados
 
-## Notícias ## 
+## Notícias ##
+
 mostrariamos o rss de cada empresa instalada na central.
 O Apresentador mostraria uma lista de RSS de uma empresa num intervalo a ser testado, acredito que no maximo 10 segundos com imagem.
 
