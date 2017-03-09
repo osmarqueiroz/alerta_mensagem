@@ -1,19 +1,31 @@
 #Sistema de chamados#
 
-O sistema será capaz de notificar usuários em TV, Notebook, Celular ou qualquer dispositivo que utilize navegadores (chrome,firefox,safari).
+Basicamente precisamos de um sistema que notifique as pessoas de outros andares de uma forma mais informal e com isso caso não tenha relatório de metas, mostra-se informações de clima e notícias da cidade. Utilizaremos equipamentos como **Smart TV, Notebook e celulares**. Cada dispositivo terá uma finalidade.
 
-O sistema é divido em 3 setores (Apresentação, Adm, Usuario Chamado).
+**SmartTV** – será responsável por apenas mostras as informações.
 
+**Notebook** – poderá abrir a tela de informações.
+
+**Celular** – também terá as funções no notebook, só que mais voltado para adicionar mensagens
+
+*Todos os usuários e equipamento serão registrados para saber em qual equipamento redirecionaremos as informações.
+*O dispositivo será cadastrado e receberá um código de 4 números
+*O dispositivo poderá ter nome;
+*Todas as informações de referência única do dispositivo ficará registrada no localStorage ou cookie, assim não precisaremos efetuar cadastros;
+
+#Dispositivo de apresentação recursos#
+
+Noticias
+*Buscaremos noticias via RSS de diversas empresas;
+*
+
+Regras do usuário
+*O usuário será registrado.
+*O usuário terá acesso completo ou limitado
 
 ## Usuario Chamado ##
-são usuários registrados, podem adicionar mensagens para todos os dispositivos ou dispositivos selecionados.
+*são usuários registrados, podem adicionar mensagens para todos os dispositivos ou dispositivos selecionados.
 
-## Apresentação ##
-Temos diversas configurações;
-### padrão ###
-onde podemos apresentar noticias dos maiores portais, o clima do dia, e lista de ultimos chamados, que ficam registrado no dispositivo;
-### somente relatório ###
-onde apresentamos relatórios da empesa e mostrariamos as informações dos chamados
 
 ## Notícias ##
 
