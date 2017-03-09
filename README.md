@@ -49,7 +49,7 @@ Atualização desses dados seram feitos a cada 5 minuitos ou mais.
 * Cookie;
 * jQuery;
 
-## Regras do dominio; ##
+## Regras do dominio ##
 
 ### Usuario ###
 * Nivel administrador;
