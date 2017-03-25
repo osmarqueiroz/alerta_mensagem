@@ -1,32 +1,47 @@
 var express = require('express');
 var router = express.Router();
-var http = require('http');
-var xml2js = require('xml2js').parseString;
+var baixarXML = require('../modelos/baixarxml.js').baixarXML;
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
 router.get('/noticias',function(req, res, next){
+  var url ="http://rss.home.uol.com.br/index.xml";
+baixarXML(url,function(dados){
   
-  var url = 'http://pox.globo.com/rss/g1';
-  
- http.get(url,function(response){
-    var dadosString = "";
-    response.on("data",function(dados){
-      dadosString += dados;
-      console.log(dados);
-    });
-    res.on('end', () => {
-      console.log(dadosString);
-      xml2js(dadosString,function(err,result){
-        console.log(err,result);  
-      });
-    });
+   var lista = dados.data.rss.channel.item;
+   // console.log(dados.data.rss.channel.item);
+   for(var i in lista){
+     console.log("\n",lista[i],"\n"); 
+     break;
+   }
  });
+  /* R7
+   var url = 'http://noticias.r7.com/feed.xml';
+ baixarXML(url,function(dados){
+  
+   var lista = dados.data.feed.entry;
+  //  console.log(lista);
+   for(var i in lista){
+     console.log("\n",lista[i],"\n"); 
+     
+   }
+ });*/
+  /* padrão G1
+   var url = 'http://pox.globo.com/rss/g1';
+ baixarXML(url,function(dados){
+   var lista = dados.data.rss.channel;
+   for(var i in lista.item){
+     console.log("\n",lista.item[i],"\n"); 
+   }
+ });*/
+
+
+res.send('');
  
 
-res.send('respond with a resource');
 });
 
 module.exports = router;
