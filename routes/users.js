@@ -1,23 +1,24 @@
 var express = require('express');
 var router = express.Router();
-var baixarXML = require('../modelos/baixarxml.js').baixarXML;
+//var baixarXML = require('../models/baixarxml.js').baixarXML;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-
+/*
 router.get('/noticias',function(req, res, next){
-  var url ="http://rss.home.uol.com.br/index.xml";
-baixarXML(url,function(dados){
+ // var url ="http://rss.home.uol.com.br/index.xml";
+//baixarXML(url,function(dados){
   
-   var lista = dados.data.rss.channel.item;
+  // var lista = dados.data.rss.channel.item;
    // console.log(dados.data.rss.channel.item);
-   for(var i in lista){
-     console.log("\n",lista[i],"\n"); 
-     break;
-   }
- });
+  // for(var i in lista){
+  //   console.log("\n",lista[i],"\n"); 
+ //    break;
+  // }
+
+ });*/
   /* R7
    var url = 'http://noticias.r7.com/feed.xml';
  baixarXML(url,function(dados){
@@ -39,9 +40,5 @@ baixarXML(url,function(dados){
  });*/
 
 
-res.send('');
- 
-
-});
 
 module.exports = router;
