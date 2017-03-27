@@ -1,6 +1,15 @@
-var express = require('express');
-var listaEmpresaNoticia = require('../models/noticia/dataList');
-var router = express.Router();
+const express = require('express');
+const listaEmpresaNoticia = require('../models/noticia/dataList');
+let router = express.Router();
+
+
+router.use('/buscar',function(req,res,next){
+next();
+});
+
+
+
+
 
 router.get('/', function(req, res, next) {
     var company = [];
@@ -9,8 +18,6 @@ router.get('/', function(req, res, next) {
     }
     res.end(JSON.stringify({error:false,data:company})); 
 });
-
-
 
 router.get('/buscar',function(req,res){
 
