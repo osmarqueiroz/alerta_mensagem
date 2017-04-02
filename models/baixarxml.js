@@ -1,21 +1,21 @@
 var http = require('http');
 var parser = require('xml2json');
 
-module.exports.baixarXML = function(url,callback){
-
-  return http.get(url,function(result){
-    var rawData = '';
-    result.on('data', (chunk) => rawData += chunk);
-    result.on('end', () => {
-      try {
-        var nodeParse = JSON.parse(parser.toJson(rawData));
-          callback({error:false,data:nodeParse});
-       
-      
-      } catch (e) {
-        callback({error:true,data:e.message});
-      }
+module.exports.baixarXML = function(url){
+  return new Promise(function(resolve,reject){
+    http.get(url,function(result){
+      var rawData = '';
+      result.on('data', function(chunk) {
+        rawData += chunk;
+      });
+      result.on('end', function(){
+        try {
+          var nodeParse = JSON.parse(parser.toJson(rawData));
+          resolve({error:false,data:nodeParse});
+        } catch (e) {
+          reject({error:true,data:e.message});
+        }
+      });   
     });
   });
-
 }
