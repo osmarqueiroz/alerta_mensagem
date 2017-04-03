@@ -10,11 +10,16 @@ router.use('/buscarListas',function(req,res,next){
 });
 
 router.get('/buscarListas',function(req,res,next){
-    var listas = req.query.lista;
+var listas = req.query.lista;
     var noticia = require("../models/noticia/r7");
-    noticia.buscarNoticia();
-
-res.end();
+    var dados = '';
+    noticia.buscarNoticia().then(function(resPromise){
+         res.charset = 'utf-8';
+         res.set({'content-type': 'text/html'});
+        res.write(JSON.stringify(resPromise));   
+         res.end();        
+    });
+     
 });
 
 

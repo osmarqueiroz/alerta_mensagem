@@ -10,13 +10,12 @@ let padronizar = function(noticias){
     }
 
     for(var noticia of noticias.data.feed.entry){
-      let padronizaNoticia = noticiaBase; 
-
-      padronizaNoticia.titulo = noticia.title.$t;
-      padronizaNoticia.data = noticia.published;
-      padronizaNoticia.origem = noticia.author.name;
-      listaNoticias.push(padronizaNoticia);
-      
+      var data = new Date(noticia.published);
+      listaNoticias.push({
+        titulo : noticia.title.$t,
+        data : data.getDay()+'/'+data.getMonth()+'/'+data.getFullYear()+'-'+data.getHours()+':'+data.getMinutes(),
+        origem : noticia.author.name
+            });      
     }
   } catch (error) {
     
@@ -26,8 +25,9 @@ let padronizar = function(noticias){
 
 let url = lista.R7;
 module.exports.buscarNoticia = function(){
-   manipularNoticia.baixarXML(url).then(function(res){
-    console.log(res);
-   });
-} 
+   return manipularNoticia.baixarXML(url).then(function(resposta){       
+      return padronizar(resposta);    
+    });
+}
+
 
